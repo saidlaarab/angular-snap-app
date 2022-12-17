@@ -19,4 +19,22 @@ export class FaceSnapService {
     return this.faceSnaps;
   }
 
+  snapIt(snapId: number): void{
+    const faceSnap = this.getAllFaceSnaps().find( fs => fs.id === snapId);
+    if(faceSnap){
+      faceSnap.nbrLikes++;
+    }else{
+      throw new Error('no face snap found!');
+    }
+  }
+
+  unsnapIt(snapId: number): void{
+    const faceSnap = this.getAllFaceSnaps().find( fs => fs.id === snapId);
+    if(faceSnap){
+      faceSnap.nbrLikes--;
+    }else{
+      throw new Error('no face snap found!');
+    }
+  }
+
 }
