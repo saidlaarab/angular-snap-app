@@ -19,21 +19,26 @@ export class FaceSnapService {
     return this.faceSnaps;
   }
 
+  getFaceSnapById(id: number): FaceSnap | undefined {
+    const faceSnap = this.getAllFaceSnaps().find( fs => fs.id === id);
+    if(faceSnap){
+      return faceSnap;
+    }else{
+      throw new Error(`no face snap found for the ID : ${id} !`);
+    }
+  }
+
   snapIt(snapId: number): void{
-    const faceSnap = this.getAllFaceSnaps().find( fs => fs.id === snapId);
+    const faceSnap = this.getFaceSnapById(snapId);
     if(faceSnap){
       faceSnap.nbrLikes++;
-    }else{
-      throw new Error('no face snap found!');
     }
   }
 
   unsnapIt(snapId: number): void{
-    const faceSnap = this.getAllFaceSnaps().find( fs => fs.id === snapId);
+    const faceSnap = this.getFaceSnapById(snapId);
     if(faceSnap){
       faceSnap.nbrLikes--;
-    }else{
-      throw new Error('no face snap found!');
     }
   }
 
