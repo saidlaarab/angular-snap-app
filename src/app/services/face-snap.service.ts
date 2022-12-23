@@ -19,7 +19,7 @@ export class FaceSnapService {
     return this.faceSnaps;
   }
 
-  getFaceSnapById(id: number): FaceSnap | undefined {
+  getFaceSnapById(id: number): FaceSnap {
     const faceSnap = this.getAllFaceSnaps().find( fs => fs.id === id);
     if(faceSnap){
       return faceSnap;
