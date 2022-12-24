@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+.card-title {
+    padding: 16px 0 16px 16px;
+}
+
+.card {
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin: 15px 0 !important;
+}
+
+.card-bottom-btn {
+    width: 95%;
+    margin: 15px 2.5%;
+}

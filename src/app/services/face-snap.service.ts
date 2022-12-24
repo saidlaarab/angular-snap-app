@@ -9,9 +9,9 @@ export class FaceSnapService {
   
   constructor() {
     this.faceSnaps = [
-      {id: 1, description: "First Face Snap", nbrLikes: 30},
-      {id: 2, description: "Second Face Snap", nbrLikes: 46},
-      {id: 3, description: "Third Face Snap", nbrLikes: 25}
+      {id: 1, description: "First Face Snap", picLink: 'assets/images/flowers-sunrise.jpg', nbrLikes: 30},
+      {id: 2, description: "Second Face Snap", picLink: 'assets/images/nature-in-morning.jpg', nbrLikes: 46},
+      {id: 3, description: "Third Face Snap",  picLink: 'assets/images/sunset.png',nbrLikes: 25}
     ];
   }
 

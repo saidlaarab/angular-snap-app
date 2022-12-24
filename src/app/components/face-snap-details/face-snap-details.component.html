@@ -1,0 +1,14 @@
+<div class="card snap-container">
+    <div class="card-title">
+      <h3>{{facesnap.description}}</h3>
+    </div>
+    <div class="card-body">
+      <img [src]="facesnap.picLink" alt="post-pic" width="700px"/>
+    </div>
+    <div class="card-footer">
+      <span>{{facesnap.nbrLikes}}</span> likes
+      <a class="btn bg-primary text-white" (click)="onSnap()">{{snapped ? 'Unsnap' : 'Snap'}}</a>
+    </div>
+    <a class="btn btn-secondary card-bottom-btn" routerLink="/facesnaps">Back</a>
+  </div>
+  
