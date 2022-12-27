@@ -1,4 +1,19 @@
 <div class="landing-block">
+    <!-- Template-driven form -->
+    <form (ngSubmit)="onEmailSubmit()">
+      <label for="email-input">Enter your email to subscribe to our newsletter </label>
+      <input type="email" id="email-input" class="form-control" [(ngModel)]="userEmail" name="userEmail"/>
+      <button type="submit" class="btn btn-secondary form-control">Subscribe</button>
+    </form>
+    <form #userForm="ngForm" (ngSubmit)="onSubmitUserForm(userForm)">
+      <label for="firsname-input">Enter your first name: </label>
+      <input type="texte" id="firstname-input" class="form-control" [(ngModel)]="firstName" name="fistName"/>
+
+      <label for="lastname-input">Enter your last name: </label>
+      <input type="texte" id="lastname-input" class="form-control" placeholder="lastName" [(ngModel)]="lastName" name="lastName" disabled/>
+      
+      <button type="submit" class="btn btn-secondary form-control">Subscribe</button>
+    </form>
     <img src="assets/images/landing-page.PNG" alt="Facesnap logo">
     <div class="landing-links">
       <a class="btn btn-secondary" (click)="onContinueClick()">Continuer vers Snapface</a>
